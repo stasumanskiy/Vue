@@ -1,21 +1,8 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="wrapper">
+    <div class="hero">
+      <app-header></app-header>
+    </div>
   </div>
 </template>
 
@@ -30,31 +17,38 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
 
-h1, h2 {
-  font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap')
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+body
+  margin: 0
+  padding: 0
+  min-width: 320px
+  background: #fff
+  font-family: 'Roboto', sans-serif 
+  font-size: 16px
+  line-height: 1.4
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+.hero
+  position: relative
+  padding-top: 90px
+  width: 100%
+  height: 200vh
+  background-color: #ffd900
+  @media (min-width: 992px)
+    padding-top: 160px
 
-a {
-  color: #42b983;
-}
+.wrapper
+	width: 100%
+	max-width: 1920px
+	margin: 0 auto
+
+.inner
+  max-width: 1024px
+  padding: 0 15px
+  margin: 0 auto 
+
+button
+  outline: none!important    
 </style>
