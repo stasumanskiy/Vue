@@ -40,31 +40,34 @@
 		</header>
 	</header> -->
 		<div class="container">
-			<b-navbar toggleable="lg" type="dark" variant="info">
-				<b-navbar-brand href="#">
-					<img src="./assets/logo.svg" class="d-inline-block" alt="Logo"> 
-					tinyone
-				</b-navbar-brand>
-				<b-navbar-toggle target="nav-collapse"
-							class="toggle" 
-							@click="isActive = !isActive"
-							:class="{'is-active': isActive}"
-							>
-							<div class="toggle__wrap">
-								<span class="toggle__line"></span>
-							</div>
-							<span class="toggle__text">
-								Menu
-							</span>
-				</b-navbar-toggle>
-				<b-collapse id="nav-collapse" is-nav>
-					<b-navbar-nav right>
-						<b-nav-item href="#" v-for="item in navList">
-							{{ item }}
-						</b-nav-item>
-					</b-navbar-nav>
-				</b-collapse>
-			</b-navbar>
+				<div class="row justify-content-md-center">
+					<div class="col-xs-12 col-md-10">
+						<b-navbar toggleable="lg" type="dark" variant="info">
+							<b-navbar-brand href="#">
+								<img src="./assets/logo.svg" class="d-inline-block" alt="Logo">
+							</b-navbar-brand>
+							<b-navbar-toggle target="nav-collapse"
+										class="toggle" 
+										@click="isActive = !isActive"
+										:class="{'is-active': isActive}"
+										>
+										<div class="toggle__wrap">
+											<span class="toggle__line"></span>
+										</div>
+										<span class="toggle__text">
+											Menu
+										</span>
+							</b-navbar-toggle>
+							<b-collapse id="nav-collapse" is-nav>
+								<b-navbar-nav right>
+									<b-nav-item href="#" v-for="item in navList">
+										{{ item }}
+									</b-nav-item>
+								</b-navbar-nav>
+							</b-collapse>
+						</b-navbar>
+					</div>
+				</div>
 		</div>
 </header>	
 </template>
@@ -95,11 +98,12 @@ export default {
 	right: 0
 	left: 0
 	padding: 15px
-	transition: all .5s
-	background-color: #ffd900
+	background-color: rgba(#ffd900, .9)
+	z-index: 100
 	@media (min-width: 992px)
 		padding: 50px 0
 		position: absolute
+
 
 	&__wrap
 		display: flex
@@ -108,26 +112,34 @@ export default {
 
 .navbar
 	padding: 0
-
-.navbar-nav
-	align-items: center
-	justify-content: center
+	@media (max-width: 992px)
+		padding: 20px 0
+	.nav-item:not(:first-child)
+		@media (min-width: 992px)
+			margin-left: 60px
 
 .navbar-dark .navbar-nav .nav-link
+	padding: 0
 	font-size: 20px
 	font-weight: 800
 	color: #000
 	text-decoration: none
-	transition: color .2s
+	transition: background-color .2s, color .2s
 	&:hover
 		color: #fff
+	@media (max-width: 992px)
+		padding: 20px 0 
+		&:hover
+			background-color: rgba(255,255,255, .3)
 
 .navbar-dark .navbar-brand
-	width: 50px
+	width: 110px
 	font-size: 28px
 	font-weight: 800
 	line-height: 1
 	color: #000!important
+	@media (min-width: 992px)
+		width: 146px
 
 .navbar-expand-lg .navbar-collapse
 	justify-content: center

@@ -2,6 +2,7 @@
   <div class="wrapper">
     <div class="hero">
       <app-header></app-header>
+      <app-slider></app-slider>
     </div>
   </div>
 </template>
@@ -34,7 +35,6 @@ body
   position: relative
   padding-top: 90px
   width: 100%
-  height: 200vh
   background-color: #ffd900
   @media (min-width: 992px)
     padding-top: 160px
@@ -48,6 +48,10 @@ body
   max-width: 1024px
   padding: 0 15px
   margin: 0 auto 
+
+.container
+  @media (max-width: 992px)
+    max-width: 100%
 
 button
   outline: none!important    
