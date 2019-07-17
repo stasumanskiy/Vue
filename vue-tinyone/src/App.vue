@@ -1,9 +1,12 @@
 <template>
   <div class="wrapper">
-    <div class="hero">
+    <section class="hero">
       <app-header></app-header>
       <app-slider></app-slider>
-    </div>
+    </section>
+    <main>
+      <app-settings></app-settings>
+    </main>
   </div>
 </template>
 

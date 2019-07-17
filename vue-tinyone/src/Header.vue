@@ -97,7 +97,7 @@ export default {
 	top: 0
 	right: 0
 	left: 0
-	padding: 15px
+	padding: 0
 	background-color: rgba(#ffd900, .9)
 	z-index: 100
 	@media (min-width: 992px)
@@ -128,7 +128,7 @@ export default {
 	&:hover
 		color: #fff
 	@media (max-width: 992px)
-		padding: 20px 0 
+		padding: 15px 0 
 		&:hover
 			background-color: rgba(255,255,255, .3)
 
