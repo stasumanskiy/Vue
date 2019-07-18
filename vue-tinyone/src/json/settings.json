@@ -1,0 +1,38 @@
+{
+	"settingsCard0": {
+		"settingsCardTitle": "Tinyone features",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/computer-tablet.png",
+		"settingsCardImgSAlt": "computer-tablet"
+	},
+	"settingsCard1": {
+		"settingsCardTitle": "Fully Responsive",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/lemon.png",
+		"settingsCardImgSAlt": "lemon"
+	},
+	"settingsCard2": {
+		"settingsCardTitle": "Fully Layered PSD",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/folder.png",
+		"settingsCardImgSAlt": "folder"
+	},
+	"settingsCard3": {
+		"settingsCardTitle": "Font Awesome Icons",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/code.png",
+		"settingsCardImgSAlt": "code"
+	},
+	"settingsCard4": {
+		"settingsCardTitle": "HTML5 & CSS3",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/email.png",
+		"settingsCardImgSAlt": "email"
+	},
+	"settingsCard5": {
+		"settingsCardTitle": "Email Template",
+		"settingsCardDescript": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.  Magnam doloribus voluptatibus neque nihil nobis distinctio, natus recusandae officia beatae corporis odio.",
+		"settingsCardImgSrc": "./src/assets/bookmark.png",
+		"settingsCardImgSAlt": "bookmark"
+	}
+}

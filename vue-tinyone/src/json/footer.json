@@ -1,0 +1,32 @@
+{
+  "footerContactCol0": {
+    "footerContactLink0": "Example",
+    "footerContactLink1": "Shop",
+    "footerContactLink2": "License"
+  },
+  "footerContactCol1": {
+    "footerContactLink0": "Contact",
+    "footerContactLink1": "About",
+    "footerContactLink2": "Privacy",
+    "footerContactLink3": "Terms"
+  },
+  "footerContactCol2": {
+    "footerContactLink0": "Download",
+    "footerContactLink1": "Support",
+    "footerContactLink2": "Documents"
+  },
+  "footerContactCol3": {
+    "footerContactLink0": "Madia",
+    "footerContactLink1": "Blog",
+    "footerContactLink2": "Forums"
+  },
+  "footerContactColStatic": {
+    "footerContactText0": "HALOVIETNAM LTD",
+    "footerContactText1": "66, Dang Vang ngu, Dong Da",
+    "footerContactText2": "Hanoi Vietnam",
+    "footerContactMailLink": "contact@halovietnam.com",
+    "footerContactMailLinkHref": "mailto:contact@halovietnam.com",
+    "footerContactPhoneLink": "+844 35149182",
+    "footerContactPhoneLinkHref": "tel:+84435149182"
+  }
+}

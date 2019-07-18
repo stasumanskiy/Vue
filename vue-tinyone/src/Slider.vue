@@ -1,7 +1,7 @@
 <template>
   <div class="container">
 		<div class="row justify-content-md-center">
-			<div class="col-sm-10">
+			<div class="col-sm-12 col-md-10">
 				<b-carousel
 					id="carousel-1"
 					v-model="slide"
@@ -14,90 +14,18 @@
 					@sliding-start="onSlideStart"
 					@sliding-end="onSlideEnd"
 				>
-					<b-carousel-slide img-blank>
+					<b-carousel-slide img-blank  v-for="data in myJson">
 						<div class="b-carousel-slide__row">
 							<div class=" b-carousel-slide__col b-carousel-slide__col--left">
 								<h3 class="b-carousel-slide__title">
-									Inspire your inspiration
+									{{ data.heroSlideTitle }}
 								</h3>
 								<div class="b-carousel-slide__wrap">
 									<div class="b-carousel-slide__descript">
-										Simple to use for your app, products
-										showcase and your inspiration
+									{{ data.heroSlideDescript }}										
 									</div>
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-										a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-									</p>
-								</div>
-								<div class="b-carousel-slide__block">
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/apple-logo.png" alt="Apple-logo">
-									</a>
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/android-logo.png" alt="Android-logo">
-									</a>
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/windows-logo.png" alt="Windows-logo">
-									</a>
-								</div>
-							</div>
-							<div class="b-carousel-slide__col b-carousel-slide__col--right">
-								<div class="b-carousel-slide__img">
-									<img src="./assets/tablet.png" alt="">
-								</div>
-							</div>
-						</div>
-					</b-carousel-slide>
-					<b-carousel-slide img-blank>
-						<div class="b-carousel-slide__row">
-							<div class=" b-carousel-slide__col b-carousel-slide__col--left">
-								<h3 class="b-carousel-slide__title">
-									Inspire your inspiration 2
-								</h3>
-								<div class="b-carousel-slide__wrap">
-									<div class="b-carousel-slide__descript">
-										Simple to use for your app, products
-										showcase and your inspiration
-									</div>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-										a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-									</p>
-								</div>
-								<div class="b-carousel-slide__block">
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/apple-logo.png" alt="Apple-logo">
-									</a>
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/android-logo.png" alt="Android-logo">
-									</a>
-									<a href="#" class="b-carousel-slide__link">
-										<img src="./assets/windows-logo.png" alt="Windows-logo">
-									</a>
-								</div>
-							</div>
-							<div class="b-carousel-slide__col b-carousel-slide__col--right">
-								<div class="b-carousel-slide__img">
-									<img src="./assets/tablet.png" alt="">
-								</div>
-							</div>
-						</div>
-					</b-carousel-slide>
-					<b-carousel-slide img-blank>
-						<div class="b-carousel-slide__row">
-							<div class=" b-carousel-slide__col b-carousel-slide__col--left">
-								<h3 class="b-carousel-slide__title">
-									Inspire your inspiration 3
-								</h3>
-								<div class="b-carousel-slide__wrap">
-									<div class="b-carousel-slide__descript">
-										Simple to use for your app, products
-										showcase and your inspiration
-									</div>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-										a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
+									{{ data.heroSlideText }}										
 									</p>
 								</div>
 								<div class="b-carousel-slide__block">
@@ -126,11 +54,13 @@
 </template>
 
 <script>
+import contentJSON from './json/slider.json'
 export default {
 	data() {
 		return {
 			slide: 0,
-			sliding: null
+			sliding: null,
+			myJson: contentJSON
 		}
 	},
 	methods: {

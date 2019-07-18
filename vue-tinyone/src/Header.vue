@@ -55,13 +55,13 @@
 											<span class="toggle__line"></span>
 										</div>
 										<span class="toggle__text">
-											Menu
+											{{ headerJson.navMenuBtn.navMenuBtnText }}
 										</span>
 							</b-navbar-toggle>
 							<b-collapse id="nav-collapse" is-nav>
 								<b-navbar-nav right>
-									<b-nav-item href="#" v-for="item in navList">
-										{{ item }}
+									<b-nav-item href="#" v-for="item in headerJson">
+										{{ item.link0 }}
 									</b-nav-item>
 								</b-navbar-nav>
 							</b-collapse>
@@ -73,15 +73,13 @@
 </template>
 
 <script>
+import contentJSON from './json/header.json'
+
 export default {
 	data() {
 		return {
-			navList: [
-				'Features',
-				'Support',
-				'Blog'
-			],
-			isActive: false
+			isActive: false,
+			headerJson: contentJSON
 		}
 	}
 }

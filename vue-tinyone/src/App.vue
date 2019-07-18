@@ -6,7 +6,9 @@
     </section>
     <main>
       <app-settings></app-settings>
+      <app-contacts></app-contacts>
     </main>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -55,6 +57,18 @@ body
 .container
   @media (max-width: 992px)
     max-width: 100%
+
+.content-block 
+  padding: 0 0 100px 0
+  text-align: center
+  &__title
+    font-weight: 700
+    margin-bottom: 18px
+  &__descript
+    font-size: 18px
+    font-weight: 500
+  &--color
+    color: #fff  
 
 button
   outline: none!important    

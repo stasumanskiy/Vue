@@ -1,0 +1,17 @@
+{
+	"heroSlide0": {
+		"heroSlideTitle": "Inspire your inspiration",
+		"heroSlideDescript": "Simple to use for your app, products showcase and your inspiration",
+		"heroSlideText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum."
+	},
+	"heroSlide1": {
+		"heroSlideTitle": "Inspire your inspiration 1",
+		"heroSlideDescript": "Simple to use for your app, products showcase and your inspiration",
+		"heroSlideText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum."
+	},
+	"heroSlide2": {
+		"heroSlideTitle": "Inspire your inspiration 2",
+		"heroSlideDescript": "Simple to use for your app, products showcase and your inspiration",
+		"heroSlideText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum."
+	}
+}
