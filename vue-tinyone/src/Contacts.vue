@@ -20,20 +20,25 @@
 							<b-form-group
 								id="input-group-1"
 								label-for="input-1"
+								class="contact-form__group"
 							>
 								<b-form-input
 									id="input-1"
 									v-model="form.email"
 									type="email"
+									:state="emailState"
 									required
 									:placeholder="form.placeholder"
 								></b-form-input>
+								<b-form-invalid-feedback id="input-live-feedback" class="contact-form__error">
+									{{ contactJson.contactContent.contactErrorInput }}
+								</b-form-invalid-feedback>
 							</b-form-group>
 						</div>
 						<div class="contact-form__col contact-form__col--right">
 							<b-button class="button" type="submit" variant="primary">
-								{{ contactJson.contactContent.contactContentBtn }}
-								</b-button>
+								{{ contactJson.contactContent.contactBtnText }}
+							</b-button>
 						</div>
 					</b-form>
 				</div>
@@ -66,32 +71,38 @@ import contentBlockJSON from './json/content.json'
 
 export default {
 	data() {
-      return {
-        form: {
-					email: '',
-					placeholder: 'Enter email to update'
-        },
-        show: true,
-				contactJson: contentJSON,
-				staticTextJson: contentBlockJSON
-      }
-    },
-    methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
-    }
+		return {
+			form: {
+				email: '',
+				placeholder: 'Enter email to update',
+				reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
+			},
+			show: true,
+			contactJson: contentJSON,
+			staticTextJson: contentBlockJSON
+		}
+	},
+	methods: {
+		onSubmit(evt) {
+			evt.preventDefault()
+			alert(JSON.stringify(this.form))
+		},
+		onReset(evt) {
+			evt.preventDefault()
+			// Reset our form values
+			this.form.email = ''
+			// Trick to reset/clear native browser form validation state
+			this.show = false
+			this.$nextTick(() => {
+				this.show = true
+			})
+		}
+	},
+	computed: {
+		emailState() {
+			return (this.form.reg.exec(this.form.email) ) ? true : false
+		}
+	}
 }
 </script>
 
@@ -118,6 +129,19 @@ export default {
 			text-align: center	
 			@media (max-width: 576px)
 				width: 100%
+	&__group
+		position: relative
+		margin-bottom: 20px
+	&__error
+		position: absolute
+		bottom: -20px			
+		left: 0
+		transform: translateY(100%)
+		transition: transform .3s, opacity .3s
+		opacity: 0
+		&.invalid-feedback
+			opacity: 1
+			transform: translateX(0)
 	.form-control
 		height: 46px
 		border: transparent	

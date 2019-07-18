@@ -1,5 +1,6 @@
 {
   "contactContent": {
-    "contactContentBtn": "Submit"
+    "contactBtnText": "Submit",
+    "contactErrorInput": "Enter a valid e-mail"
   }
 }
